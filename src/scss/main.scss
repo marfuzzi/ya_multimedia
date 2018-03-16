@@ -26,6 +26,13 @@ body {
     transform: translateY(-50%);
 }
 
+.canvas__noise{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 .controls-left{
     position: absolute;
     display: flex;

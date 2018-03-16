@@ -14,10 +14,16 @@
     const bgCanvasInvert = document.createElement('canvas');
     const bgContextInvert = bgCanvasInvert.getContext('2d');
 
+    const canvasNoise = document.querySelector('.canvas__noise');
+    const contextNoise = canvasNoise.getContext('2d');
+    const bgCanvasNoise = document.createElement('canvas');
+    const bgContextNoise = bgCanvasNoise.getContext('2d');
+
     let width = 0;
     let height = 0;
     let loopVideo;
     let track;
+    let noise;
 
     getWebcam();
 
@@ -29,6 +35,9 @@
         }
         if (event.target.classList.contains('button-photo')) {
             takePhoto(canvasInvert);
+        }
+        if (event.target.classList.contains('button-noise')) {
+            noise = noise ? null : true;
         }
     });
 
@@ -51,6 +60,7 @@
 
     function playVideo() {
         loopVideo = requestAnimationFrame(playVideo);
+        noise ? addNoise(bgContextNoise, contextNoise, width, height) : contextNoise.clearRect(0, 0, width, height);
         addInvert(bgContextInvert, contextInvert, video, width, height);
     }
 
