@@ -7,8 +7,24 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <div>Hello</div>
+    <div class="section">
+        <div class="camera">
+            <canvas class="canvas__invert"></canvas>
+            <canvas class="canvas__noise"></canvas>
+            <video id="video" autoplay class="camera__video"></video>
+        </div>
+        <div class="controls-left">
+            <button class="button button-anxiety" >Anxiety</button>
+            <button class="button button-noise" >Noise</button>
+            <button class="button button-zoom" >Zoom</button>
+            <button class="button button-photo" >Fix moment</button>
+            <div class="photo-collection"></div>
+        </div>
+        <div class="controls-right">
+            <canvas class="canvasTime" width="250" height="300"></canvas>
+        </div>
+        <audio class="snap" src="" hidden></audio>
+    </div>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
-

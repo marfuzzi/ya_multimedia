@@ -1,0 +1,19 @@
+html, body, .section, .camera__video {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+}
+
+.section {
+    height: 100%;
+    position: relative;
+}
+
+.camera {
+    overflow: hidden;
+    vertical-align: middle;
+}
