@@ -23,6 +23,15 @@
 
     video.addEventListener('loadedmetadata', captureFrame);
 
+    document.addEventListener('click', function (event) {
+        if (event.target.className === 'photo-img') {
+            event.target.remove();
+        }
+        if (event.target.classList.contains('button-photo')) {
+            takePhoto(canvasInvert);
+        }
+    });
+
     function captureFrame() {
         width = canvasInvert.width = video.videoWidth;
         height = canvasInvert.height = video.videoHeight;
