@@ -42,6 +42,7 @@
 
     function playVideo() {
         loopVideo = requestAnimationFrame(playVideo);
+        addInvert(bgContextInvert, contextInvert, video, width, height);
     }
 
     function getWebcam() {

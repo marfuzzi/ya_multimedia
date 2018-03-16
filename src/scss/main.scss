@@ -6,6 +6,7 @@ html, body, .section, .camera__video {
 }
 
 body {
+    overflow: hidden;
 }
 
 .section {
@@ -16,4 +17,11 @@ body {
 .camera {
     overflow: hidden;
     vertical-align: middle;
+}
+
+.canvas__invert {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
