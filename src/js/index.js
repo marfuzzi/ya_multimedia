@@ -28,6 +28,7 @@
     getWebcam();
 
     video.addEventListener('loadedmetadata', captureFrame);
+    requestAnimationFrame(renderTime);
 
     document.addEventListener('click', function (event) {
         if (event.target.className === 'photo-img') {
