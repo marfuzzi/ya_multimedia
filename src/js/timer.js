@@ -13,8 +13,8 @@ function renderTime() {
     let newSeconds = seconds + (milliseconds/1000);
 
     contextTime.strokeStyle = '#28d1fa';
-    contextTime.lineWidth = 10;
-    contextTime.shadowBlur = 12;
+    contextTime.lineWidth = 1;
+    contextTime.shadowBlur = 1;
     contextTime.lineCap = 'round';
     contextTime.shadowColor = '#28d1fa';
 
@@ -36,9 +36,9 @@ function renderTime() {
     contextTime.stroke();
 
     // time
-    contextTime.font ='15px Arial';
-    contextTime.fillStyle = '28d1fa';
-    contextTime.fillText(time, 90, 270);
+    // contextTime.font ='15px Arial';
+    // contextTime.fillStyle = '28d1fa';
+    // contextTime.fillText(time, 90, 270);
 }
 
 function degToRad(degree) {

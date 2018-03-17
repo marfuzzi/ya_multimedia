@@ -10,18 +10,36 @@
     <div class="section">
         <div class="camera">
             <canvas class="canvas__invert"></canvas>
+            <canvas class="canvas__anxiety"></canvas>
             <canvas class="canvas__noise"></canvas>
-            <video id="video" autoplay class="camera__video"></video>
+            <div class="grid"></div>
+            <div class="radar">
+                <div class="circle first"></div>
+                <div class="circle second"></div>
+            </div>
+            <video class="camera__video" autoplay ></video>
         </div>
         <div class="controls-left">
-            <button class="button button-anxiety" >Anxiety</button>
-            <button class="button button-noise" >Noise</button>
-            <button class="button button-zoom" >Zoom</button>
-            <button class="button button-photo" >Fix moment</button>
+            <div class = "buttons">
+                <button class="button button-anxiety" >Anxiety</button>
+                <button class="button button-noise" >Noise</button>
+                <button class="button button-zoom" >Zoom</button>
+                <button class="button button-photo" >Fix moment</button>
+            </div>
             <div class="photo-collection"></div>
         </div>
         <div class="controls-right">
             <canvas class="canvasTime" width="250" height="300"></canvas>
+            <svg>
+                <path d="m0,50
+                  l20,0 l5,-5 l5,15 l5,-40
+                  l5,40 l5,-15 l5,5 l20, 0"
+                  class='path1'/>
+                <path d="m0,50
+                  l18,0 l5,-5 l5,15 l5,-40
+                  l5,40 l5,-15 l5,5 l22, 0"
+                  class='path2'/>
+            <svg>
         </div>
         <audio class="snap" src="snap.mp3" hidden></audio>
     </div>

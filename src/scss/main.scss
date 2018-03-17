@@ -1,4 +1,4 @@
-html, body, .section, .camera__video {
+html, body, .section {
     width: 100%;
     height: 100%;
     margin: 0;
@@ -9,58 +9,60 @@ body {
     overflow: hidden;
 }
 
-.section {
-    height: 100%;
+.camera {
     position: relative;
 }
 
-.camera {
-    overflow: hidden;
-    vertical-align: middle;
-}
-
-.canvas__invert {
+.canvas__invert, .canvas__noise {
     width: 100%;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0;
 }
 
-.canvas__noise{
+.canvas__anxiety{
+    width: 100%;
+}
+
+.canvasTime {
+    border-radius: 25px;
+}
+
+.anxiety{
+    filter: saturate(8);
     width: 100%;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0;
 }
 
 .controls-left{
-    position: absolute;
     display: flex;
+    position: absolute;
     flex-direction: column;
     width: 25%;
-    top:0;
-    left:0;
+    top:10px;
+    left:10px;
+    border-radius: 25px;
 }
+
 .controls-right{
     display: flex;
     flex-direction: column;
     position: absolute;
     width: 250px;
-    top:0;
-    right:0;
+    top:10px;
+    right:10px;
+    border-radius: 5px;
 }
 
-.button {
-    margin: 10px 20px;
-    padding: 5px;
-    font-size: 1.5em;
-    background-color: black;
-    box-shadow: 1px 2px 3px;
-    color: #28d1fa;
-}
-
-.photo {
+.buttons {
+    display: grid;
+    height:200px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 2fr;
+    grid-gap: 16px;
+    padding: 16px;
     background: black;
+    border-radius: 5px;
 }
 
 .photo-collection {
@@ -74,7 +76,119 @@ body {
 .photo-collection img {
     width:100px;
     overflow-x: scroll;
-    padding:0.5rem 0.5rem 0.5rem 0.5rem;
-    box-shadow:0 0 3px rgba(0,0,0,0.2);
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
     background: #01181f;
+}
+
+.radar {
+  height: 100px;
+  margin: 100px auto;
+  width: 100px;
+  display:none;
+}
+
+.circle {
+    background-color: black;
+    border-radius: 100px;
+    height: 200px;
+    width: 200px;
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    margin-top: -100px;
+    margin-left: -100px;
+    transform: scale(0);
+    animation: opacityScale 1700ms ease-out infinite;
+    background: linear-gradient(45deg,rgba(0, 0, 0, 0) 48%,rgba(0, 0, 0, 0.2) 50%,rgba(0, 0, 0, 0) 52%),linear-gradient(-45deg,rgba(0, 0, 0, 0) 48%,rgba(0, 0, 0, 0.2) 50%,rgba(0, 0, 0, 0) 52%);
+    background-size: 1em 1em;
+    background-color: red;
+}
+
+@keyframes opacityScale {
+    0% {
+      opacity: 0.3;
+      transform: scale(0.1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(2);
+    }
+}
+
+.second {
+    animation-delay: 1000ms;
+}
+
+.grid {
+    border-radius: 100px;
+    height: 200%;
+    width: 100%;
+    position: fixed;
+    top:0;
+    transform: scale(0);
+    animation: gridScales 9000ms ease-out infinite;
+    opacity: 0.2;
+    background:linear-gradient(
+    mediumvioletred, transparent 0.6px
+    ),
+    linear-gradient(
+    90deg,
+    mediumvioletred, transparent 0.6px
+    );
+    background-size: 10px 10px;
+    background-position: center center;
+    border: 2px solid mediumvioletred;
+}
+
+@keyframes gridScales {
+    0% {
+    transform: scale(1);
+    }
+    100% {
+    transform: scale(2);
+    }
+}
+
+svg{
+    background-color: black;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 230px;
+    left: 90px;
+}
+
+path {
+    stroke: #28d1fa;
+    fill: none;
+    stroke-width: 1;
+}
+
+.path1 {
+    stroke-dasharray: 170, 180;
+    animation: pulse 2s infinite linear;
+}
+
+.path2 {
+    stroke-dasharray: 170, 180;
+    animation: pulse2 2s infinite linear;
+}
+
+@keyframes pulse {
+    0% {
+        stroke-dashoffset: 350;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes pulse2 {
+    0% {
+        stroke-dashoffset: 525;
+    }
+    100% {
+        stroke-dashoffset: 175;
+    }
 }

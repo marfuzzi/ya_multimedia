@@ -19,11 +19,15 @@
     const bgCanvasNoise = document.createElement('canvas');
     const bgContextNoise = bgCanvasNoise.getContext('2d');
 
+    const radar = document.querySelector('.radar');
+
     let width = 0;
     let height = 0;
     let loopVideo;
     let track;
     let noise;
+    let anxiety;
+    let zoom;
 
     getWebcam();
 
@@ -39,6 +43,13 @@
         }
         if (event.target.classList.contains('button-noise')) {
             noise = noise ? null : true;
+        }
+        if (event.target.classList.contains('button-anxiety')) {
+            anxiety = true;
+        }
+        if (event.target.classList.contains('button-zoom')) {
+            radar.style.display = zoom ? 'none' : 'block';
+            zoom = zoom ? null : true;
         }
     });
 
@@ -62,7 +73,13 @@
     function playVideo() {
         loopVideo = requestAnimationFrame(playVideo);
         noise ? addNoise(bgContextNoise, contextNoise, width, height) : contextNoise.clearRect(0, 0, width, height);
-        addInvert(bgContextInvert, contextInvert, video, width, height);
+        if (anxiety) {
+            video.classList.add('anxiety');
+            setTimeout(function () { anxiety = null; }, 1000);
+        } else {
+            video.classList.remove('anxiety');
+            addInvert(bgContextInvert, contextInvert, video, width, height);
+        }
     }
 
     function getWebcam() {
