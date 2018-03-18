@@ -5,7 +5,8 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "lint": "eslint /src/**/*.js --quiet"
+        "lint": "eslint /src/**/*.js --quiet",
+        "deploy": "gh-pages -d build"
     },
     "author": "marfuzzi",
     "license": "ISC",
@@ -15,8 +16,10 @@
         "browser-sync": "^2.18.13",
         "css-mqpacker": "^6.0.2",
         "cssnano": "^3.10.0",
+        "gh-pages": "^1.1.0",
         "gulp": "^3.9.1",
         "gulp-concat": "^2.6.1",
+        "gulp-copy": "^1.1.0",
         "gulp-deporder": "^1.1.0",
         "gulp-htmlclean": "^2.7.20",
         "gulp-imagemin": "^4.1.0",
@@ -29,7 +32,6 @@
     },
     "dependencies": {
         "eslint": "^4.18.2",
-        "eslint-config-yandex": "^1.0.6",
-        "gulp-copy": "^1.1.0"
+        "eslint-config-yandex": "^1.0.6"
     }
 }
