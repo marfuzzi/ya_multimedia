@@ -15,6 +15,7 @@ function renderTime() {
     contextTime.strokeStyle = '#00ffff';
     contextTime.lineWidth = 1;
     contextTime.lineCap = 'round';
+
     contextTime.fillRect(0,0,500,500);
 
     // hours
@@ -31,11 +32,6 @@ function renderTime() {
     contextTime.beginPath();
     contextTime.arc(125,125,40,degToRad(270),degToRad(newSeconds*6-90));
     contextTime.stroke();
-
-    // time
-    contextTime.font ='15px Arial';
-    contextTime.fillStyle = '28d1fa';
-    contextTime.fillText(time, 90, 270);
 }
 
 function degToRad(degree) {
