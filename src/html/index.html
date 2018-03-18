@@ -1,51 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
+    <meta charset='UTF-8'>
     <title>Terminator</title>
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="css/main.css">
+    <meta name='viewport' content='width=device-width'>
+    <link rel='stylesheet' href='css/main.css'>
 </head>
 <body>
-    <div class="section">
-        <div class="camera">
-            <canvas class="canvas__invert"></canvas>
-            <canvas class="canvas__anxiety"></canvas>
-            <canvas class="canvas__noise"></canvas>
-            <div class="grid"></div>
-            <div class="radar">
-                <div class="circle first"></div>
-                <div class="circle second"></div>
+    <div class='section'>
+        <div class='camera'>
+            <canvas class='canvas__invert'></canvas>
+            <canvas class='canvas__anxiety'></canvas>
+            <canvas class='canvas__noise'></canvas>
+            <div class='grid'></div>
+            <div class='radar'>
+                <div class='circle first'></div>
+                <div class='circle second'></div>
             </div>
-            <video class="camera__video" autoplay ></video>
+            <video class='camera__video' autoplay ></video>
         </div>
-        <div class="controls-left">
-            <div class = "buttons">
-                <button class="button button-anxiety" >Anxiety</button>
-                <button class="button button-noise" >Noise</button>
-                <button class="button button-zoom" >Zoom</button>
-                <button class="button button-photo" >Fix moment</button>
+        <div class='controls-left'>
+            <div class = 'buttons'>
+                <fieldset>
+                    <!-- Invert -->
+                    <input type='radio' id='radioInvert' checked='checked' name='radio'>
+                    <label for='radioInvert'>Invert</label>
+                    <!-- Grey -->
+                    <input type='radio' id='radioGrey' name='radio'>
+                    <label for='radioGrey'>Grey</label>
+                    <!-- Red -->
+                    <input type='radio' id='radioRed' name='radio'>
+                    <label for='radioRed'>Red</label>
+                </fieldset>
+                <fieldset>
+                    <a class='button'>Button</a>
+                    <a class='button'>Button</a>
+                    <a class='button'>Button</a>
+                </fieldset>
+                <fieldset>
+                    <a class='superBtn'>Super Button</a>
+                </fieldset>
+                <!-- <button class='button button-anxiety' >Anxiety</button>
+                <button class='button button-noise' >Noise</button>
+                <button class='button button-zoom' >Zoom</button>
+                <button class='button button-photo' >Fix moment</button> -->
             </div>
-            <div class="photo-collection"></div>
+            <div class='photo-collection'></div>
         </div>
-        <div class="controls-right">
-            <canvas class="canvasTime" width="250" height="300"></canvas>
+        <div class='controls-right'>
+            <canvas class='canvasTime' width='250' height='300'></canvas>
             <svg>
-                <path d="m0,50
+                <path d='m0,50
                   l20,0 l5,-5 l5,15 l5,-40
-                  l5,40 l5,-15 l5,5 l20, 0"
+                  l5,40 l5,-15 l5,5 l20, 0'
                   class='path1'/>
-                <path d="m0,50
+                <path d='m0,50
                   l18,0 l5,-5 l5,15 l5,-40
-                  l5,40 l5,-15 l5,5 l22, 0"
+                  l5,40 l5,-15 l5,5 l22, 0'
                   class='path2'/>
             <svg>
-            <div class="audio">
-                <canvas class="camera__audio"></canvas>
+            <div class='audio'>
+                <canvas class='camera__audio'></canvas>
             </div>
         </div>
-        <audio class="snap" src="snap.mp3" hidden></audio>
+        <audio class='snap' src='snap.mp3' hidden></audio>
     </div>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type='text/javascript' src='js/main.js'></script>
 </body>
 </html>

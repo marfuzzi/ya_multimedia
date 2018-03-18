@@ -18,7 +18,7 @@ function renderTime() {
     contextTime.lineCap = 'round';
     contextTime.shadowColor = '#28d1fa';
 
-    contextTime.fillRect(0,0,500,500);
+  //  contextTime.fillRect(0,0,500,500);
 
     // hours
     contextTime.beginPath();
@@ -36,9 +36,9 @@ function renderTime() {
     contextTime.stroke();
 
     // time
-    // contextTime.font ='15px Arial';
-    // contextTime.fillStyle = '28d1fa';
-    // contextTime.fillText(time, 90, 270);
+    contextTime.font ='15px Arial';
+    contextTime.fillStyle = '28d1fa';
+    contextTime.fillText(time, 90, 270);
 }
 
 function degToRad(degree) {

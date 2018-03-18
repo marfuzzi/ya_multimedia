@@ -141,7 +141,7 @@
         analyser.getByteTimeDomainData(dataArray); // get waveform data and put it into the array created above
 
         contextAudio.fillStyle = 'rgb(200, 200, 200)'; // draw wave with canvas
-        contextAudio.fillRect(0, 0, widthAudio, heightAudio);
+     //   contextAudio.fillRect(0, 0, widthAudio, heightAudio);
 
         contextAudio.lineWidth = 2;
         contextAudio.strokeStyle = 'rgb(0, 0, 0)';
@@ -166,6 +166,11 @@
       }
 
       contextAudio.lineTo(widthAudio, heightAudio/2);
+      contextAudio.strokeStyle = '#28d1fa';
+      contextAudio.lineWidth = 1;
+      contextAudio.shadowBlur = 1;
+      contextAudio.lineCap = 'round';
+      contextAudio.shadowColor = '#28d1fa';
       contextAudio.stroke();
     }
 })();
