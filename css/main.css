@@ -80,7 +80,7 @@ a {
 .canvas__anxiety {
   width: 100%; }
 
-.canvasTime {
+.canvas__time {
   border: 1px solid #28d1fa;
   border-radius: 8px;
   padding: 20px; }
