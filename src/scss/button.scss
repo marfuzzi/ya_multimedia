@@ -43,7 +43,7 @@ $btn_height:$btn_width * 0.3;
 }
 
 .button:hover {
-    color: #AEAEAE;
+    color: #00ccff;
     text-shadow:0 -1px 0 rgba(0,0,0,.4);
 }
 
@@ -51,7 +51,7 @@ $btn_height:$btn_width * 0.3;
     background-image: linear-gradient(#545454,#373738);
 }
 
-.button:active {
+.button:active, .active {
     color: #00ccff;
     text-shadow:0 -1px 0 rgba(0,0,0,.3),0 0px 30px rgba(0,255,255,.7);
     box-shadow:
@@ -62,7 +62,7 @@ $btn_height:$btn_width * 0.3;
         0 0 30px rgba(0,193,255,.1);
 }
 
-.button:active:after {
+.button:active:after, .active:after {
     background-image: linear-gradient(#262627, #2d2d2e);
     box-shadow: (
         inset 0 5px 6px rgba(0,0,0,.3),
@@ -109,7 +109,7 @@ $btn_height:$btn_width * 0.3;
     background-image: linear-gradient(#545454,#373738);
 }
 
-.button-photo:active{
+.button-photo:active {
     color: #00ccff;
     text-shadow:0 -1px 0 rgba(0,0,0,.3),0 0px 30px rgba(0,255,255,.7);
     background:#333;

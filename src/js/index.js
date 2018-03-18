@@ -11,6 +11,7 @@
     const video = document.querySelector('.camera__video');
     const canvasInvert = document.querySelector('.canvas__invert');
     const contextInvert = canvasInvert.getContext('2d');
+    const controlls = document.querySelector('.controls-left');
 
     const radar = document.querySelector('.radar');
 
@@ -41,9 +42,11 @@
         noise ? addNoise(bgContextNoise, contextNoise, width, height) : contextNoise.clearRect(0, 0, width, height);
         if (anxiety) {
             video.classList.add('anxiety');
-            setTimeout(function () { anxiety = null; }, 1000);
+            controlls.style.display = 'none';
+            setTimeout(function () { anxiety = null; }, 2000);
         } else {
             video.classList.remove('anxiety');
+            controlls.style.display = 'block';
             addInvert(contextInvert, video, width, height);
         }
     }
@@ -67,6 +70,7 @@
         }
         if (event.target.classList.contains('button-noise')) {
             noise = noise ? null : true;
+            toogle(noise, event.target);
         }
         if (event.target.classList.contains('button-anxiety')) {
             anxiety = true;
@@ -74,8 +78,13 @@
         if (event.target.classList.contains('button-zoom')) {
             radar.style.display = zoom ? 'none' : 'block';
             zoom = zoom ? null : true;
+            toogle(zoom, event.target);
         }
     });
+
+    function toogle(param, e) {
+        param ? e.classList.add('active') : e.classList.remove('active');
+    }
 
     requestAnimationFrame(renderTime);
 })();
