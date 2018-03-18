@@ -15,6 +15,7 @@ const autoprefixer = require('autoprefixer');
 const mqpacker = require('css-mqpacker');
 const cssnano = require('cssnano');
 const browserSync = require('browser-sync').create();
+const gulpCopy = require('gulp-copy');
 const reload = browserSync.reload;
 // development mode?
 const devBuild = (process.env.NODE_ENV !== 'production');
@@ -91,15 +92,19 @@ gulp.task('css', ['images'], function () {
         .pipe(gulp.dest(folder.build + 'css/'));
 });
 
+gulp.task('copy', function () {
+    return gulp.src(folder.src + 'sounds/*.mp3')
+        .pipe(gulp.dest(folder.build + 'sounds'))
+        .pipe(reload({stream: true}));
+});
 // run all tasks
-gulp.task('run', ['html', 'css', 'js']);
+gulp.task('run', ['html', 'css', 'js', 'copy']);
 
 // watch for changes
 gulp.task('watch', function () {
     browserSync.init({
         server: folder.build
     });
-
     // html changes
     gulp.watch(folder.src + 'html/**/*', ['html']);
     // javascript changes
