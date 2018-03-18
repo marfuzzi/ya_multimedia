@@ -1,6 +1,6 @@
-const addInvert = (bgContext, context, video, width, height) => {
-    bgContext.drawImage(video, 0, 0, width, height);
-    let idata = bgContext.getImageData(0, 0, width, height);
+const addInvert = (context, video, width, height) => {
+    context.drawImage(video, 0, 0, width, height);
+    let idata = context.getImageData(0, 0, width, height);
     let imageDataFiltered = invertColor(idata);
     context.putImageData(imageDataFiltered, 0, 0);
 };
