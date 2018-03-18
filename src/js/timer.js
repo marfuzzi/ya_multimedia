@@ -1,6 +1,6 @@
 function renderTime() {
     requestAnimationFrame(renderTime);
-    const canvasTime = document.querySelector('.canvasTime');
+    const canvasTime = document.querySelector('.canvas__time');
     const contextTime = canvasTime.getContext('2d');
 
     let now = new Date();
@@ -15,12 +15,6 @@ function renderTime() {
     contextTime.strokeStyle = '#00ffff';
     contextTime.lineWidth = 1;
     contextTime.lineCap = 'round';
-
-    // Background
-    gradient = contextTime.createRadialGradient(250, 250, 5, 250, 250, 300);
-    gradient.addColorStop(0, '#262627');
-    gradient.addColorStop(1, '#2d2d2e');
-    contextTime.fillStyle = gradient;
 
     // hours
     contextTime.beginPath();
