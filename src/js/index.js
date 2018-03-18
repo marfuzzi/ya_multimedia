@@ -43,7 +43,9 @@
         if (anxiety) {
             video.classList.add('anxiety');
             controlls.style.display = 'none';
-            setTimeout(function () { anxiety = null; }, 1500);
+            setTimeout(function () {
+                anxiety = null;
+            }, 1500);
         } else {
             video.classList.remove('anxiety');
             controlls.style.display = 'block';

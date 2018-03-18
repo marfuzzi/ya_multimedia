@@ -1,14 +1,18 @@
-.photo-collection {
-    display:flex;
-    flex-direction:row;
-    justify-content:center;
+.photo-collection
+{
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
-.photo-collection img {
-    width:100px;
+.photo-collection img
+{
     overflow-x: scroll;
-    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+
+    width: 100px;
+    padding: .5rem .5rem .5rem .5rem;
+
     background: #01181f;
+    box-shadow: 0 0 3px rgba(0,0,0,.2);
 }

@@ -1,24 +1,33 @@
-.canvas__invert, .canvas__noise {
-    width: 100%;
+.canvas__invert,
+.canvas__noise
+{
     position: absolute;
     top: 0;
-}
 
-.canvas__noise {
-    height: 100%;
-}
-.canvas__anxiety{
     width: 100%;
 }
 
-.canvas__time {
-    border:1px solid $blue;
-    border-radius:8px;
-    padding:20px;
+.canvas__noise
+{
+    height: 100%;
+}
+.canvas__anxiety
+{
+    width: 100%;
 }
 
-.audio {
-    position:absolute;
-    bottom:0;
-    width:100%;
+.canvas__time
+{
+    padding: 20px;
+
+    border: 1px solid $blue;
+    border-radius: 8px;
+}
+
+.audio
+{
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
 }

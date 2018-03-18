@@ -15,6 +15,7 @@ function renderTime() {
     contextTime.strokeStyle = '#00ffff';
     contextTime.lineWidth = 1;
     contextTime.lineCap = 'round';
+    contextTime.fillRect(0,0,500,500);
 
     // hours
     contextTime.beginPath();

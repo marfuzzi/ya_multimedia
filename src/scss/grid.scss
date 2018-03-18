@@ -1,29 +1,36 @@
-.grid {
-    border-radius: 100px;
-    height: 200%;
-    width: 100%;
+.grid
+{
     position: fixed;
-    top:0;
+    top: 0;
+
+    width: 100%;
+    height: 200%;
+
     transform: scale(0);
     animation: gridScales 9000ms ease-out infinite;
-    opacity: 0.5;
-    background:linear-gradient(
-    mediumvioletred, transparent 0.6px
+
+    opacity: .5;
+    border: 2px solid mediumvioletred;
+    border-radius: 100px;
+    background: linear-gradient(
+    mediumvioletred, transparent .6px
     ),
     linear-gradient(
     90deg,
-    mediumvioletred, transparent 0.6px
+    mediumvioletred, transparent .6px
     );
-    background-size: 10px 10px;
     background-position: center center;
-    border: 2px solid mediumvioletred;
+    background-size: 10px 10px;
 }
 
-@keyframes gridScales {
-    0% {
+@keyframes gridScales
+{
+    0%
+    {
         transform: scale(1);
     }
-    100% {
+    100%
+    {
         transform: scale(2);
     }
 }

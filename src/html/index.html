@@ -10,25 +10,27 @@
 <body>
     <div class='section'>
         <div class='camera'>
-            <canvas class='canvas__invert'></canvas>
-            <canvas class='canvas__anxiety'></canvas>
-            <canvas class='canvas__noise'></canvas>
+            <div class="canvas">
+                <canvas class='canvas__invert'></canvas>
+                <canvas class='canvas__anxiety'></canvas>
+                <canvas class='canvas__noise'></canvas>
+            </div>
             <div class='grid'></div>
             <div class='radar'>
-                <div class='circle first'></div>
-                <div class='circle second'></div>
+                <div class='circle circle-first'></div>
+                <div class='circle circle-second'></div>
             </div>
-            <video class='camera__video' autoplay ></video>
+            <video class='camera__video' autoplay></video>
         </div>
         <div class='controls-left'>
-                <div class='panel'>
-                    <a class='button button-anxiety'>Anxiety</a>
-                    <a class='button button-noise'>Noise</a>
-                    <a class='button button-zoom'>Zoom</a>
-                </div>
-                <div class='panel'>
-                    <a class='button-photo'>Fix Moment</a>
-                </div>
+            <div class='panel'>
+                <a class='button button-anxiety'>Anxiety</a>
+                <a class='button button-noise'>Noise</a>
+                <a class='button button-zoom'>Zoom</a>
+            </div>
+            <div class='panel'>
+                <a class='button-photo'>Fix Moment</a>
+            </div>
             <div class='panel photo-collection'></div>
             <div class='panel pulse'>
                 <svg>
