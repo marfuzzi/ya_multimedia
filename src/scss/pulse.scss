@@ -1,0 +1,44 @@
+.pulse {
+    width: 70px;
+    height: 70px;
+    margin-top: 20px;
+    border:1px solid $blue;
+    border-radius:8px;
+    padding:20px;
+    margin:0 auto;
+}
+
+path {
+    stroke: #28d1fa;
+    fill: none;
+    stroke-width: 1;
+}
+
+.path1 {
+    stroke-dasharray: 170, 180;
+    animation: pulse 2s infinite linear;
+}
+
+.path2 {
+    stroke-dasharray: 170, 180;
+    animation: pulse2 2s infinite linear;
+}
+
+@keyframes pulse {
+    0% {
+        stroke-dashoffset: 350;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes pulse2 {
+    0% {
+        stroke-dashoffset: 525;
+    }
+    100% {
+        stroke-dashoffset: 175;
+    }
+}
+

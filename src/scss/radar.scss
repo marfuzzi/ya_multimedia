@@ -1,0 +1,38 @@
+.radar {
+    height: 100px;
+    margin: 100px auto;
+    width: 100px;
+    display:none;
+}
+
+.circle {
+    height: 200px;
+    width: 200px;
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    background-color: black;
+    border-radius: 100px;
+    margin-top: -100px;
+    margin-left: -100px;
+    transform: scale(0);
+    animation: opacityScale 1700ms ease-out infinite;
+    background: linear-gradient(45deg,rgba(0, 0, 0, 0) 48%,rgba(0, 0, 0, 0.2) 50%,rgba(0, 0, 0, 0) 52%),linear-gradient(-45deg,rgba(0, 0, 0, 0) 48%,rgba(0, 0, 0, 0.2) 50%,rgba(0, 0, 0, 0) 52%);
+    background-size: 1em 1em;
+    background-color: red;
+}
+
+.second {
+    animation-delay: 1000ms;
+}
+
+@keyframes opacityScale {
+    0% {
+    opacity: 0.3;
+        transform: scale(0.1);
+    }
+    100% {
+    opacity: 0;
+        transform: scale(2);
+    }
+}

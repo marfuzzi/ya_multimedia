@@ -4,7 +4,7 @@ const button = document.querySelector('.button-foto');
 
 const takePhoto = (canvas) => {
     let img = document.querySelectorAll('.photo-img');
-    if (img.length>5) {
+    if (img.length>2) {
         img[0].remove();
     }
     snap.currentTime = 0;

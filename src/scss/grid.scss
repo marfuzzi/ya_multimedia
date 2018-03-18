@@ -1,0 +1,29 @@
+.grid {
+    border-radius: 100px;
+    height: 200%;
+    width: 100%;
+    position: fixed;
+    top:0;
+    transform: scale(0);
+    animation: gridScales 9000ms ease-out infinite;
+    opacity: 0.5;
+    background:linear-gradient(
+    mediumvioletred, transparent 0.6px
+    ),
+    linear-gradient(
+    90deg,
+    mediumvioletred, transparent 0.6px
+    );
+    background-size: 10px 10px;
+    background-position: center center;
+    border: 2px solid mediumvioletred;
+}
+
+@keyframes gridScales {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(2);
+    }
+}

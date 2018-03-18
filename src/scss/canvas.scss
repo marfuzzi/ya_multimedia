@@ -1,0 +1,21 @@
+.canvas__invert, .canvas__noise {
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.canvas__anxiety{
+    width: 100%;
+}
+
+.canvasTime {
+    border:1px solid $blue;
+    border-radius:8px;
+    padding:20px;
+}
+
+.audio {
+    position:absolute;
+    bottom:0;
+    width:100%;
+}

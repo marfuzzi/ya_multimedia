@@ -122,8 +122,8 @@
     }
 
     function audioFrame() {
-        widthAudio = canvasAudio.width = video.clientWidth;
-        heightAudio = canvasAudio.height = video.clientHeight;
+        widthAudio = canvasAudio.width = audio.clientWidth;
+        heightAudio = canvasAudio.height = audio.clientHeight;
 
         startAudio();
     }
@@ -141,10 +141,10 @@
         analyser.getByteTimeDomainData(dataArray); // get waveform data and put it into the array created above
 
         contextAudio.fillStyle = 'rgb(200, 200, 200)'; // draw wave with canvas
-     //   contextAudio.fillRect(0, 0, widthAudio, heightAudio);
+       // contextAudio.fillRect(0, 0, widthAudio, heightAudio);
 
         contextAudio.lineWidth = 2;
-        contextAudio.strokeStyle = 'rgb(0, 0, 0)';
+      //  contextAudio.strokeStyle = 'rgb(0, 0, 0)';
 
         contextAudio.beginPath();
 
@@ -169,7 +169,7 @@
       contextAudio.strokeStyle = '#28d1fa';
       contextAudio.lineWidth = 1;
       contextAudio.shadowBlur = 1;
-      contextAudio.lineCap = 'round';
+     // contextAudio.lineCap = 'round';
       contextAudio.shadowColor = '#28d1fa';
       contextAudio.stroke();
     }
