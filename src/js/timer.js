@@ -14,18 +14,14 @@ function renderTime() {
 
     contextTime.strokeStyle = '#00ffff';
     contextTime.lineWidth = 1;
- //   contextTime.shadowBlur = 1;
     contextTime.lineCap = 'round';
-//    contextTime.shadowColor = '#00ffff';
 
     // Background
     gradient = contextTime.createRadialGradient(250, 250, 5, 250, 250, 300);
     gradient.addColorStop(0, '#262627');
     gradient.addColorStop(1, '#2d2d2e');
     contextTime.fillStyle = gradient;
-    //ctx.fillStyle = 'rgba(00 ,00 , 00, 1)';
-  //  contextTime.fillRect(0, 0, 500, 500);
-   //linear-gradient(#262627, #2d2d2e)
+
     // hours
     contextTime.beginPath();
     contextTime.arc(125,125,100,degToRad(270),degToRad(hours*15-90));
